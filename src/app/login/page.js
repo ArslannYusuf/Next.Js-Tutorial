@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Header = () => {
+const Page = () => {
   return (
     <div>
-      Header
+      Login Page
     </div>
   )
 }
 
-export default Header
+export default Page
