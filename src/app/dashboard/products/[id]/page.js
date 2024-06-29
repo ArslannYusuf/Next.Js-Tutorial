@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Page = () => {
+const Page = ({ params }) => {
   return (
     <div>
-      Dashboard Products Page
+      Dashboard Products Details - {params.id}
     </div>
   )
 }
