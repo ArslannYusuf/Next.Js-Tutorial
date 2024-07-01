@@ -3,8 +3,12 @@ import Link from "next/link";
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import menu from "@/helpers/data/main-menu.json";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+
+  const pathname = usePathname();
+  // console.log(pathname)
   return (
     <Navbar
       expand="lg"
@@ -25,6 +29,7 @@ const Header = () => {
                 href={item.url}
                 as={Link}
                 prefetch={item.prefecth}
+                className={pathname === item.url ? "active" : ""}
               >
                 {item.title}
               </Nav.Link>
