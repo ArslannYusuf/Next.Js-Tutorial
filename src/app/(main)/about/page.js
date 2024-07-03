@@ -1,3 +1,4 @@
+import PageHeader from "@/components/page-header";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -5,7 +6,7 @@ import React from "react";
 const Page = () => {
 	return (
 		<div>
-			<h1>About Page</h1>
+			<PageHeader title="About Us" />
 			
 			<p>--------</p>
 			<div style={{width: "750px", height: "250px", position: "relative"}}>

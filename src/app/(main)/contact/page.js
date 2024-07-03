@@ -1,3 +1,4 @@
+import PageHeader from '@/components/page-header';
 import { wait } from '@/helpers/misc/misc';
 import React from 'react'
 
@@ -8,9 +9,9 @@ const Page = async() => {
   if(Math.random() > 0.5) throw new Error("Invalid parameters")
 
   return (
-    <div>
-        <h1>Contact Page</h1>
-    </div>
+    <>
+        <PageHeader title="Contact Us" />
+    </>
   )
 }
 
