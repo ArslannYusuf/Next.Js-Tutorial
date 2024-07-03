@@ -4,7 +4,7 @@ import { montserrat } from '@/helpers/fonts'
 
 const PageHeader = ({title}) => {
   return (
-    <h1 className={`${styles.header} ${montserrat.className}`}>
+    <h1 className={styles.header}>
       <span>{title}</span>
     </h1>
   )

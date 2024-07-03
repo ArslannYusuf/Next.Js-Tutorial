@@ -1,7 +1,13 @@
+/* bootstrap fontlarindan  */
+$font-family-sans-serif: var(--font-poppins);
 
 
 @import "bootstrap/scss/bootstrap";
 
 .nav-link.active{
     color: rgb(5, 65, 228) !important;
+}
+
+h1,h2,h3{
+    font-family: var(--font-montserrat);
 }

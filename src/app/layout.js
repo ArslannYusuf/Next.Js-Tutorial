@@ -1,10 +1,5 @@
-import { inter } from "@/helpers/fonts";
+import { poppins, montserrat } from "@/helpers/fonts";
 import "../global.scss";
-
-
-
-
-
 
 export const metadata = {
 	title: "Create Next App",
@@ -13,9 +8,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en">
+		<html lang="en" className={`${montserrat.variable} ${poppins.variable}`}>
 			<body
-				className={`${inter.className} d-flex flex-column justify-content-between vh-100`}
+				className={` d-flex flex-column justify-content-between vh-100`}
 			>
 				{children}
 			</body>
