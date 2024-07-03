@@ -3,6 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+
+export const metadata = {
+	title: "About Us",
+	description: "Our company supports ...",
+};
+
 const Page = () => {
 	return (
 		<div>
