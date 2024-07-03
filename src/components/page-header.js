@@ -1,9 +1,10 @@
 import React from 'react'
 import styles from './page-header.module.scss'
+import { montserrat } from '@/helpers/fonts'
 
 const PageHeader = ({title}) => {
   return (
-    <h1 className={styles.header}>
+    <h1 className={`${styles.header} ${montserrat.className}`}>
       <span>{title}</span>
     </h1>
   )
