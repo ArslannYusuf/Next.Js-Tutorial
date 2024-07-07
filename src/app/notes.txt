@@ -101,6 +101,24 @@ render edilmektedir.
 
 * Client ta rendering edilen bir component in içindekiler de ("use client" belirtmesek dahi) client ta render edilir.
 
+* Bir client component içinde, server component yerleştirilebilir. Bunun için
+server component in client component ile sarmallanması gerekir.
+
+
+
+Server Side Rendering olan durumlar:
+
+* Data çekme (fetch)
+* Server kaynaklarına erişme
+* Hassas bilgileri saklama (token)
+* Client tarafı javascript yoğunluluğunu azaltma
+
+
+Client Side Rendering olan durumlar:
+* Interaktivite ekleme ve event listener lar
+* Lifecycle events (useState, useEffect...)
+* Browser APIs
+
 
 ---------------------------------------------------------
 
