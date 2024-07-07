@@ -89,6 +89,20 @@ kullanıcıya özel sayfalar oluşturulacaksa
 ---------------------------------------------------------
 
 
+!!! important:
+For production Image Optimization with Next.js, the optional 'sharp' package is strongly recommended. Run 'npm i sharp', and Next.js will use it automatically for Image Optimization.
+
+
+---------------------------------------------------------
+
+Rendering : 
+* NextJs 13’ten itibaren, aksi belitilmedikçe componentler server tarafında
+render edilmektedir.
+
+* Client ta rendering edilen bir component in içindekiler de ("use client" belirtmesek dahi) client ta render edilir.
+
+
+---------------------------------------------------------
 
 
 

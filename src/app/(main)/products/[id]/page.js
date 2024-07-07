@@ -1,4 +1,5 @@
 import PageHeader from '@/components/page-header';
+import { notFound } from 'next/navigation';
 import React from 'react'
 
 export const metadata = {
@@ -8,7 +9,9 @@ export const metadata = {
 
 
 const Page = ({params}) => {
-    console.log("Params",params.id);
+    console.log("Dynamic routing");
+
+    if(params.id>100) notFound(); // 404 sayfasını render eder.
 
   return (
     <>

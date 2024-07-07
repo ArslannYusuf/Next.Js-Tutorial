@@ -8,6 +8,9 @@ export const metadata = {
 };
 
 const Page = () => {
+
+  console.log("Static routing")
+
   return (
     <>
       <PageHeader title="Products Us" />
