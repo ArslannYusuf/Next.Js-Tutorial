@@ -53,20 +53,23 @@ Static & Dynamic Rendering:
 React componentlerinin HTML haline dönüştürülmesi ve sayfaya yerleştirilmesi
 işlemine rendering denir. Rendering işlemi static veya dynamic olabilir.
 
-Static Rendering:
-Data nın çekilmesi
-(fetching) ve rendering
-işlemi uygulama build
-edilirken yapılır ve elde
-edilen sonuç istendiğinde
-gönderilmesi için server da
-cache lenir.
-
+Static Rendering: Data nın çekilmesi (fetching) ve rendering işlemi uygulama build
+edilirken yapılır ve elde edilen sonuç istendiğinde gönderilmesi için server da cache lenir.
 
 Dynamic Rendering:
-Rendering işlemi server da,
-her kullanıcı talebinde
-gerçekleştirilir.
+Rendering işlemi server da, her kullanıcı talebinde gerçekleştirilir.
+
+
+* Eğer sayfada dynamic routing yoksa
+* Veya eğer aşağıdaki segment option lardan herhangi birisi yoksa;
+
+export const dynamic = 'force-dynamic'  --> dinamik olmaya zorlar
+export const revalidate = 0 --> fetch'ler icin kullanilir, yine dinamik olmaya zorlar
+
+* Veya eğer aşağıdaki segment option varsa
+
+export const dynamic = 'force-static'  --> statik olmaya zorlar
+export const revalidate = 'force-cache' --> statik olmaya zorlar
 
 ---------------------------------------------------------
 
