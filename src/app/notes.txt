@@ -38,3 +38,56 @@ strategy="lazyOnload" />
 
 !!! important: Sayfayı ilgilendiren scriptler ilgili sayfada segmenti ilgilendiren scriptler ise
 layout.js dosyasında eklenir.
+
+
+---------------------------------------------------------
+
+Hydration:
+İlk yükleme ile gelen statik HTML in, daha sonradan yüklenen JS ile gelen HTML ile
+eşleştirilmesi ve statik içeriğin dinamiklik kazanması işlemine hydration denir. Bu
+aşamada eşleştirmeden kaynaklı hydration hataları oluşabilir.
+
+---------------------------------------------------------
+
+Static & Dynamic Rendering:
+React componentlerinin HTML haline dönüştürülmesi ve sayfaya yerleştirilmesi
+işlemine rendering denir. Rendering işlemi static veya dynamic olabilir.
+
+Static Rendering:
+Data nın çekilmesi
+(fetching) ve rendering
+işlemi uygulama build
+edilirken yapılır ve elde
+edilen sonuç istendiğinde
+gönderilmesi için server da
+cache lenir.
+
+
+Dynamic Rendering:
+Rendering işlemi server da,
+her kullanıcı talebinde
+gerçekleştirilir.
+
+---------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
