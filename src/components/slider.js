@@ -10,7 +10,7 @@ const Slider = () => {
 			{slides.map((item) => (
 				<Carousel.Item key={item.id}>
                     <div style={{position: "relative", height: "50vh"}} >
-                        <Image src={`/images/${item.image}`} fill style={{objectFit: "cover"}}/>
+                        <Image src={`/images/${item.image}`} fill style={{objectFit: "cover"}} alt ="photo"/>
                     </div>
 				</Carousel.Item>
 			))}
