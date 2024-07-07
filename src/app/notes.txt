@@ -71,6 +71,21 @@ export const revalidate = 0 --> fetch'ler icin kullanilir, yine dinamik olmaya z
 export const dynamic = 'force-static'  --> statik olmaya zorlar
 export const revalidate = 'force-cache' --> statik olmaya zorlar
 
+
+Dynamic Rendering - Faydaları:
+
+ Gerçek zamanlı data paylaşılmasını sağlar
+ Kullanıcıya özel içerik oluşturulabilir
+ Cookie veya params, search params gibi
+request time da erişilebilecek veriyi
+kullanma imkanı sunar.
+
+
+Ne zaman kullanılır?
+ Data çok sık değişiyorsa
+ User panel, profile veya basket gibi
+kullanıcıya özel sayfalar oluşturulacaksa
+
 ---------------------------------------------------------
 
 
