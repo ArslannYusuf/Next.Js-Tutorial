@@ -10,9 +10,9 @@ export const metadata = {
 
 const Page = async() => {
 
-  await wait(5000);
+ /*  await wait(5000);
 
-  if(Math.random() > 0.5) throw new Error("Invalid parameters")
+  if(Math.random() > 0.5) throw new Error("Invalid parameters") */
 
   return (
     <>

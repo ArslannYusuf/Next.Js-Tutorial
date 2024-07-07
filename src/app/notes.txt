@@ -1,0 +1,40 @@
+## 3th Party Script ##
+
+HTML deki script tagı yoluyla eklenecek kodların optimize edilebilmesi için NextJs
+Script componentini önermektedir.
+
+exp: 
+<head>
+<title>First Post</title>
+<script src="https://connect.facebook.net/en_US/sdk.js" />
+</head>
+
+
+!!! important: 
+Klasik yöntemle eklenen script ler sayfadaki elementler yüklenmeden
+veya hydration gerçekleşmeden yapıldığı için ciddi performans
+sorunlarına veya hatalara yol açabilir.
+
+
+
+exp:
+import Script from 'next/script';
+
+<Script
+src="https://connect.facebook.net/en_US/sdk.js"
+strategy="lazyOnload" />
+
+--> strategy <--
+
+1- beforeInteractive: Nextjs kodlarından önce yükler.
+
+2- afterInteractive: (default) Nextjs kodlarından sonra yükler.
+
+3- lazyOnload: Tüm yükleme bitip, browser boşa çıktantan sonra yükler.
+
+4- worker: (experimental) Web worker olarak yükler.
+
+
+
+!!! important: Sayfayı ilgilendiren scriptler ilgili sayfada segmenti ilgilendiren scriptler ise
+layout.js dosyasında eklenir.
