@@ -116,9 +116,10 @@ Server Side Rendering olan durumlar:
 
 Client Side Rendering olan durumlar:
 * Interaktivite ekleme ve event listener lar
-* Lifecycle events (useState, useEffect...)
+* Hooks (useState, useEffect...)
 * Browser APIs
 
+!!! important: uygulamayi mumkun mertebe server side rendiring yapmamiz gerekli...
 
 ---------------------------------------------------------
 
