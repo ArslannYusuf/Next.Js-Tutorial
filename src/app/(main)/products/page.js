@@ -4,20 +4,20 @@ import { API_URL } from "@/helpers/config";
 import React from "react";
 
 export const metadata = {
-	title: "Products",
-	description: "Our company supports ...",
+  title: "Products",
+  description: "Our company supports ...",
 };
 
 const Page = async () => {
-	const res = await fetch(`${API_URL}/products`);
+  const res = await fetch(`${API_URL}/products`);
   const data = await res.json();
 
-	return (
-		<>
-			<PageHeader title="Products" />
-			<ProductList products={data}/>
-		</>
-	);
+  return (
+    <>
+      <PageHeader title="Products" />
+      <ProductList products={data} />
+    </>
+  );
 };
 
 export default Page;

@@ -1,9 +1,7 @@
-import React from 'react'
-import { Table } from 'react-bootstrap'
+import React from "react";
+import { Table } from "react-bootstrap";
 
-const DashboardProducts = ({products}) => {
-
-
+const DashboardProducts = ({ products }) => {
   return (
     <Table striped bordered hover>
       <thead>
@@ -17,16 +15,15 @@ const DashboardProducts = ({products}) => {
       <tbody>
         {products.map((item, index) => (
           <tr key={item.id}>
-            <td>{index+1}</td>
+            <td>{index + 1}</td>
             <td>{item.title}</td>
             <td>{item.category}</td>
-            <td>{item.price}</td>
+            <td>${item.price}</td>
           </tr>
         ))}
-        
       </tbody>
     </Table>
-  )
-}
+  );
+};
 
-export default DashboardProducts
+export default DashboardProducts;

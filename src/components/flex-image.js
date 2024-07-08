@@ -10,7 +10,7 @@ const FlexImage = ({
 }) => {
   return (
     <div style={{ position: "relative", width, height }}>
-      <Image src={src} fill alt={alt} style={{ objectFit: fit }} />
+      <Image src={src} alt={alt} fill style={{ objectFit: fit }} />
     </div>
   );
 };
