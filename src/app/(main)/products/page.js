@@ -1,21 +1,23 @@
-import PageHeader from '@/components/page-header'
-import React from 'react'
-
+import PageHeader from "@/components/page-header";
+import ProductList from "@/components/product-list";
+import { API_URL } from "@/helpers/config";
+import React from "react";
 
 export const metadata = {
-	title: "Products Us",
+	title: "Products",
 	description: "Our company supports ...",
 };
 
-const Page = () => {
+const Page = async () => {
+	const res = await fetch(`${API_URL}/products`);
+  const data = await res.json();
 
-  console.log("Static routing")
+	return (
+		<>
+			<PageHeader title="Products" />
+			<ProductList products={data}/>
+		</>
+	);
+};
 
-  return (
-    <>
-      <PageHeader title="Products Us" />
-    </>
-  )
-}
-
-export default Page
+export default Page;

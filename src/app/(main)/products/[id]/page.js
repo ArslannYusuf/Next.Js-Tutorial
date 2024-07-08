@@ -1,4 +1,6 @@
 import PageHeader from '@/components/page-header';
+import ProductDetails from '@/components/product-details';
+import { API_URL } from '@/helpers/config';
 import { notFound } from 'next/navigation';
 import React from 'react'
 
@@ -8,14 +10,22 @@ export const metadata = {
 };
 
 
-const Page = ({params}) => {
-    console.log("Dynamic routing");
+const Page = async ({params}) => {
+    const productId = params.id;
+    if(!productId) notFound();
 
-    if(params.id>100) notFound(); // 404 sayfasını render eder.
+
+    const res = fetch(`${API_URL}/products/${productId}`);
+    const data = await res.json();
+
+    if ( res.status === 404) notFound();
+
+
 
   return (
     <>
       <PageHeader title="Product Details Us" />
+      <ProductDetails product={data}/>
     </>
   )
 }
