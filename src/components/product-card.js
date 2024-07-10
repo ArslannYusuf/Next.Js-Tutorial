@@ -2,8 +2,8 @@
 import React from "react";
 import { Badge, Card } from "react-bootstrap";
 import Link from "next/link";
-
 const ProductCard = ({ id, title, price, image }) => {
+  console.log(image)
   return (
     <Card as={Link} href={`/products/${id}`}>
       <Card.Img variant="top" src={image} />
